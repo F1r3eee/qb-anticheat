@@ -132,9 +132,11 @@ Tutte le violazioni vengono inviate a un webhook Discord, che ti consente di mon
             }}
         }), {['Content-Type'] = 'application/json'})
     end
-end```
+end
+```
 ## Esempio di Controllo Server
-```RegisterServerEvent('qb-anticheat:checkPlayer')
+```
+RegisterServerEvent('qb-anticheat:checkPlayer')
 AddEventHandler('qb-anticheat:checkPlayer', function()
     local src = source
     local playerName = GetPlayerName(src)
