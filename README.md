@@ -76,7 +76,8 @@ Il sistema anticheat è altamente personalizzabile tramite il file **config/conf
         teleport = "Sei stato rilevato a una distanza sospetta!"
     },
     salvaLogLocale = true
-}```
+}
+```
 
 ## **Descrizione delle impostazioni:**
 - **serverCheckInterval:** Intervallo (in millisecondi) in cui il server verifica gli aggiornamenti delle regole.
@@ -146,12 +147,14 @@ AddEventHandler('qb-anticheat:checkPlayer', function()
             LogViolation(src, playerName, "Uso di arma vietata: " .. weapon)
         end
     end
-end)```
+end)
+```
 ## Controllo e Aggiornamento Automatico delle Regole
 Il server esegue controlli periodici per aggiornare le regole in tempo reale. Ogni volta che vengono scaricate nuove regole, vengono applicate automaticamente.
 
 ## Codice di Aggiornamento Automatico
-```CreateThread(function()
+```
+CreateThread(function()
     while true do
         Wait(Config.serverCheckInterval)
 
@@ -168,7 +171,8 @@ end)
 function UpdateRules(rules)
     -- Aggiorna le regole del server
     Config.regole = rules
-end```
+end
+```
 ## **Supporto**
 Per qualsiasi problema o domanda, apri una issue su GitHub o contattami via Discord (f1r3ee).
 
