@@ -30,7 +30,7 @@ qb-anticheat/
 ├── logs/
 │   └── logs.json           # Log locali (se abilitati)
 └── README.md               # Documentazione
-
+```
 ## **Installazione**
 
 1. Scarica i file: Estrai la cartella **qb-anticheat** nella cartella **resources** del tuo server FiveM.
