@@ -9,7 +9,7 @@ CreateThread(function()
         local coords = GetEntityCoords(ped)
         local health = GetEntityHealth(ped)
         local armor = GetPedArmour(ped)
-        local speed = GetEntitySpeed(ped) * 3.6 -- Convertito in km/h
+        local speed = GetEntitySpeed(ped) * 3.6 
 
         -- Controllo della velocità
         if speed > Config.maxVelocita then
@@ -54,7 +54,7 @@ CreateThread(function()
             TriggerServerEvent('qb-anticheat:logViolation', "Comportamento sospetto: invisibilità rilevata")
         end
 
-        -- Controllo velocità veicolo (se in un veicolo)
+        -- Controllo velocità veicolo
         if IsPedInAnyVehicle(ped, false) then
             local vehicle = GetVehiclePedIsIn(ped, false)
             local vehicleSpeed = GetEntitySpeed(vehicle) * 3.6
